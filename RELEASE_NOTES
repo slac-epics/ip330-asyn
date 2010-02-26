@@ -1,2 +1,12 @@
 # Arturo please fill something in here
+# Okay, I will do the honors (Ernest Williams)
+
+# This is really the Acromag IP330 with the software developed
+# as an asyn driver by Mark Rivers. Mark Rivers calls this
+# synApps module, ip330.  We call it ip330-asyn to distinguish
+# it from the software implementation developed by Sheng Peng
+# here at SLAC.
+
+ip330-asyn-R2-5-lcls1:    Build with base-R3-14-8-2-lcls5
+                          Build with rtems-4.9.3
 

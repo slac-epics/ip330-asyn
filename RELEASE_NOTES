@@ -7,6 +7,9 @@
 # it from the software implementation developed by Sheng Peng
 # here at SLAC.
 
+ip330-asyn-R2-6-lcls1:    From Rivers: Fixes to build with EPICS 3.14.11 also
+                          From Rivers: Fixes for parallel make
+
 ip330-asyn-R2-5-lcls2:    Build with base-R3-14-8-2-lcls6
                           Build with rtems-4.9.4
 

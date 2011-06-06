@@ -7,6 +7,8 @@
 # it from the software implementation developed by Sheng Peng
 # here at SLAC.
 
+ip330-asyn-R2-6-lcls2:    Building against ipac-R2-11-lcls1 and asyn-R4-17-RC1-lcls1
+
 ip330-asyn-R2-6-lcls1:    From Rivers: Fixes to build with EPICS 3.14.11 also
                           From Rivers: Fixes for parallel make
 

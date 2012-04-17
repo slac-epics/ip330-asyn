@@ -13,5 +13,4 @@ BASE_SITE_TOP=/afs/slac/g/lcls/epics/base
 MODULES_SITE_TOP=/afs/slac/g/lcls/epics/modules/R3-14-12
 IOC_SITE_TOP=/afs/slac/g/lcls/epics/iocTop
 EPICS_BASE_VER=base-R3-14-12
-WWW_DIR=/afs/slac/www/grp/lcls/controls
 #==============================================================================

@@ -14,14 +14,12 @@ TEMPLATE_TOP=$(EPICS_BASE)/templates/makeBaseApp/top
 # =============================================================
 EPICS_MODULES=$(MODULES_SITE_TOP)
 
-
-
 # =============================================================
 # Define the version of modules needed by
 # IOC apps or other Support apps
 # =============================================================
-IPAC_MODULE_VERSION=ipac-R2-11-lcls1
-ASYN_MODULE_VERSION=asyn-R4-18-lcls2
+IPAC_MODULE_VERSION=ipac-R2-11_1-0
+ASYN_MODULE_VERSION=asyn-R4-20_1-1
 
 # ============================================================
 #  IPAC release V2-7 or later is required.
@@ -35,4 +33,3 @@ ASYN=$(EPICS_MODULES)/asyn/$(ASYN_MODULE_VERSION)
 # EPICS_BASE usually appears last so other apps can override stuff:
 # =================================================================
 EPICS_BASE=$(BASE_SITE_TOP)/$(EPICS_BASE_VER)
-

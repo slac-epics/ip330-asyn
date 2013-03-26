@@ -7,6 +7,8 @@
 # it from the software implementation developed by Sheng Peng
 # here at SLAC.
 
+ip330-asyn-R2-6_1-1:      Building against ipac-R2-11_1-0 and asyn-R4-20_1-1
+
 ip330-asyn-R2-6_1-0:      Building against ipac-R2-11-lcls1 and asyn-R4-18-lcls2
 
 ip330-asyn-R2-6-lcls2:    Building against ipac-R2-11-lcls1 and asyn-R4-17-RC1-lcls1

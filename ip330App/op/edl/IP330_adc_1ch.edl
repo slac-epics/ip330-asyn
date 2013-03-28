@@ -1,0 +1,87 @@
+4 0 0
+beginScreenProperties
+major 4
+minor 0
+release 0
+x 341
+y 183
+w 100
+h 50
+font "helvetica-medium-r-18.0"
+ctlFont "helvetica-medium-r-14.0"
+btnFont "helvetica-medium-r-18.0"
+fgColor index 14
+bgColor index 4
+textColor index 14
+ctlFgColor1 index 30
+ctlFgColor2 index 32
+ctlBgColor1 index 34
+ctlBgColor2 index 35
+topShadowColor index 37
+botShadowColor index 44
+snapToGrid
+gridSize 5
+endScreenProperties
+
+
+# (Rectangle)
+object activeRectangleClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 99
+h 19
+lineColor index 0
+fill
+fillColor index 0
+lineWidth 0
+endObjectProperties
+
+# (Static Text)
+object activeXTextClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 0
+w 100
+h 20
+font "helvetica-medium-r-14.0"
+fontAlign "center"
+fgColor index 14
+useDisplayBg
+value {
+ "ADC CH $(CHAN)"
+}
+endObjectProperties
+
+# (Text Control)
+object activeXTextDspClass
+beginObjectProperties
+major 4
+minor 0
+release 0
+x 0
+y 25
+w 100
+h 20
+controlPv "$(P)chan$(CHAN)AI"
+font "helvetica-medium-r-14.0"
+fontAlign "center"
+smartRefresh
+fastUpdate
+fgColor index 63
+fgAlarm
+bgColor index 1
+autoHeight
+format decimal
+nullColor index 32
+useHexPrefix
+objType "controls"
+newPos
+endObjectProperties
+

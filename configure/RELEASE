@@ -19,7 +19,7 @@ EPICS_MODULES=$(MODULES_SITE_TOP)
 # IOC apps or other Support apps
 # =============================================================
 IPAC_MODULE_VERSION=ipac-R2-11_1-0
-ASYN_MODULE_VERSION=asyn-R4-20_1-1
+ASYN_MODULE_VERSION=asyn-R4-21_1-0
 
 # ============================================================
 #  IPAC release V2-7 or later is required.

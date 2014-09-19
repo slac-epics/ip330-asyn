@@ -14,4 +14,6 @@ MODULES_SITE_TOP=/afs/slac/g/lcls/epics/modules/R3-14-12
 IOC_SITE_TOP=/afs/slac/g/lcls/epics/iocTop
 EPICS_BASE_VER=base-R3-14-12
 PACKAGE_SITE_TOP=/afs/slac/g/lcls/package
+TOOLS_SITE_TOP=/afs/slac/g/lcls/tools
+ALH_SITE_TOP=/afs/slac/g/lcls/tools
 #==============================================================================

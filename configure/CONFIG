@@ -4,6 +4,7 @@ include $(TOP)/configure/CONFIG_APP
 
 #CROSS_COMPILER_TARGET_ARCHS = vxWorks-68040
 #CROSS_COMPILER_TARGET_ARCHS = RTEMS-beatnik
+CROSS_COMPLIER_TARGET_ARCH += linuxRT-x86
 
 # Use this when your IOC and the host use different paths
 # to access the application. Typically this will be 

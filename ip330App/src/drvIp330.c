@@ -122,11 +122,21 @@ static void rebootCallback(void *drvPvt);
 
 typedef struct ip330ADCregs {
     unsigned short control;
+#if	BYTE_ORDER==__BIG_ENDIAN	
     unsigned char timePrescale;
     unsigned char intVector;
+#else
+    unsigned char intVector;
+    unsigned char timePrescale;
+#endif
     unsigned short conversionTime;
+#if	BYTE_ORDER==__BIG_ENDIAN	
     unsigned char endChanVal;
     unsigned char startChanVal;
+#else
+    unsigned char startChanVal;
+    unsigned char endChanVal;
+#endif
     unsigned short newData[2];
     unsigned short missedData[2];
     unsigned short startConvert;
@@ -419,10 +429,18 @@ int initIp330(const char *portName, ushort_t carrier, ushort_t slot,
     pPvt->lock = epicsMutexCreate();
     pPvt->regs->startConvert = 0x0000;
     pPvt->regs->intVector = intVec;
+#ifndef	linux	
+    /* we shouldn't be calling devLib stuff from here anyway */
     if (devConnectInterruptVME(intVec, (void *)intFunc, (void *)pPvt) < 0) {
       errlogPrintf("initIp330: failure connecting to interrupt\n");
       return -1;
     }
+#else
+    if(ipmIntConnect(carrier, slot, intVec, intFunc, (void *)pPvt))
+    {
+        errlogPrintf ("ip330Create: intConnect failed for device %d\n", slot);
+    }
+#endif
     epicsAtExit(rebootCallback, pPvt);
     pPvt->regs->control = 0x0000;
     pPvt->regs->control |= 0x0002; /* Output Data Format = Straight Binary */
@@ -443,6 +461,7 @@ int initIp330(const char *portName, ushort_t carrier, ushort_t slot,
         setGainPrivate(pPvt, pPvt->range, 0, i);
     }
     setSecondsBetweenCalibrate(pPvt, pPvt->pasynUser, SECONDS_BETWEEN_CALIBRATE);
+
 
     return 0;
 }

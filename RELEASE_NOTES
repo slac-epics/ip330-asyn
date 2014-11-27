@@ -7,6 +7,11 @@
 # it from the software implementation developed by Sheng Peng
 # here at SLAC.
 
+ip330-asyn-R2-7_1-2:      Build against ipac-R2-11_1-2 and asyn-R4-23_1-2
+                          This was all triggered by a new linuxRT tool-chain which exposed a  
+                          problem in Hytec's IP carrier for mTCA source code
+
+
 ip330-asyn-R2-7_1-1:      added support for Linux uTCA/PCI/PCIe carriers 
 
 ip330-asyn-R2-7_1-0:      Upgrade to new version R2-7 from APS CARS

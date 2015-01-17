@@ -7,7 +7,7 @@
 # it from the software implementation developed by Sheng Peng
 # here at SLAC.
 
-ip330-asyn-R2-7_1-2:      Build against ipac-R2-11_1-2 and asyn-R4-23_1-2
+ip330-asyn-R2-7_1-2:      Build against ipac-R2-11_1-2 and asyn-R4-25_1-0
                           This was all triggered by a new linuxRT tool-chain which exposed a  
                           problem in Hytec's IP carrier for mTCA source code
 

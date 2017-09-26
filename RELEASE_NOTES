@@ -3,5 +3,9 @@
 #  Name: RELEASE_NOTES
 #
 #==============================================================
+R2.9-1.0.0: 2017-09-26 Hugo Slepicka
+    Applied patch patches/pcie_big_little_endian.patch
+	If the system uses little endian we need to flip the order
+	of some elements on the struct.
 R2.9-0.1.0: 2017-09-26 Hugo Slepicka
     Changes needed for the new git workflow.

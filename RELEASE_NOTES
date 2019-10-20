@@ -3,6 +3,10 @@
 #  Name: RELEASE_NOTES
 #
 #==============================================================
+
+R2.9-1.1:  20-Oct-2019,  K. Luchni 
+     Release with IPAC R2.14-0.2.0
+
 R2.9-1.0.1: 2019-01-10 Marcio Donadio
     Release with asyn R4.32-1.0.0 and IPAC R2.11-1.6.0.
 

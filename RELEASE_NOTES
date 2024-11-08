@@ -3,6 +3,8 @@
 #  Name: RELEASE_NOTES
 #
 #==============================================================
+R2.9-1.2.2: 2024-11-08 Jeremy Lorelli
+    Update asyn to R4.39-1.0.2
 
 R2.9-1.2.1: 2022-02-23 Marcio Donadio
      Release with asyn/R4.39-1.0.1

@@ -3,6 +3,9 @@
 #  Name: RELEASE_NOTES
 #
 #==============================================================
+R2.9-1.2.3: 2025-02-19 Jeremy Lorelli
+    Upgrade to ipac/R2.15-1.1.0
+
 R2.9-1.2.2: 2024-11-08 Jeremy Lorelli
     Update asyn to R4.39-1.0.2
 

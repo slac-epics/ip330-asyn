@@ -52,6 +52,7 @@ of this distribution.
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <stdint.h>
 
 /* EPICS includes */
 #include <drvIpac.h>
@@ -289,7 +290,7 @@ static asynStatus disconnect        (void *drvPvt, asynUser *pasynUser);
 
 
 /* These are private functions, not used in any interfaces */
-static void intFunc           (int drvPvt); /* Interrupt function */
+static void intFunc           (void* drvPvt); /* Interrupt function */
 static void intTask           (drvIp330Pvt *pPvt);
 static int calibrate          (drvIp330Pvt *pPvt, int channel);
 static void waitNewData       (drvIp330Pvt *pPvt);
@@ -477,7 +478,7 @@ int initIp330(const char *portName, ushort_t carrier, ushort_t slot,
     pPvt->regs->intVector = intVec;
     driverTable[numCards] = pPvt;
     numCards++;
-    if (ipmIntConnect(carrier, slot, intVec, intFunc, numCards-1)) {
+    if (ipmIntConnect(carrier, slot, intVec, intFunc, (void*)(uintptr_t)(numCards-1))) {
       errlogPrintf("initIp330: interrupt connect failure\n");
       return -1;
     }
@@ -768,8 +769,9 @@ static int setScanMode(drvIp330Pvt *pPvt, scanModeType mode)
     return(0);
 }
 
-static void intFunc(int card)
+static void intFunc(void* pcard)
 {
+    int card = (uintptr_t)pcard;
     drvIp330Pvt *pPvt = driverTable[card];
     int i;
     int data[MAX_IP330_CHANNELS];

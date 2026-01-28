@@ -3,6 +3,10 @@
 #  Name: RELEASE_NOTES
 #
 #==============================================================
+R2.9-1.3.0: 2026-01-28 Jeremy Lorelli
+    GCC 15 build fixes
+    Update to ipac/R2.15-1.2.0, asyn/R4.42-1.1.0
+
 R2.9-1.2.2: 2024-11-08 Jeremy Lorelli
     Update asyn to R4.39-1.0.2
 
